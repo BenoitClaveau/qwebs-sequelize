@@ -1,0 +1,63 @@
+{
+    "name": "qwebs-sequelize",
+    "version": "0.0.1",
+    "description": "Sequelize for qwebs",
+    "main": "index.js",
+    "dependencies": {
+      "gulp": "latest",
+      "gulp-git": "latest",
+      "gulp-install": "latest",
+      "gulp-json-editor": "latest",
+      "moment": "latest",
+      "pm2": "latest",
+      "qwebs": "latest",
+      "qwebs-http": "latest",
+      "sequelize": "latest",
+      "tedious": "latest",
+      "pluralize": "latest",
+    },
+    "devDependencies": {
+        "jasmine": "latest",
+        "coveralls": "latest",
+        "istanbul": "latest"
+    },
+    "scripts": {
+        "test": "node node_modules/jasmine/bin/jasmine.js tests",
+        "test-cover": "istanbul cover node_modules/jasmine/bin/jasmine.js --captureExceptions tests && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+        "deploy": "gulp prod"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BenoitClaveau/qwebs-sequelize.git"
+    },
+    "keywords": [
+        "web",
+        "application",
+        "server",
+        "dependency-injection",
+        "webserver",
+        "promise",
+        "api",
+        "stream",
+        "backend",
+        "back-end",
+        "http",
+        "router",
+        "routing",
+        "route",
+        "webcomponents",
+        "polymer",
+        "angular",
+        "react"
+    ],
+    "author": {
+        "name": "Benoît Claveau",
+        "email": "benoit.claveau@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/BenoitClaveau/qwebs-sequelize/issues"
+    },
+    "homepage": "https://github.com/BenoitClaveau/qwebs-sequelize"
+}
+

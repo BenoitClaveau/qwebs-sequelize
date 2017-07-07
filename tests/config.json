@@ -1,0 +1,21 @@
+{
+    "routes": "./routes.json",
+    "http": {
+        "port": 3000
+    },
+    "sequelize": {
+        "connection": {
+            "database": "<database>",
+            "username": "sa",
+            "password": "sa",
+            "options": {
+                "dialect": "mssql",
+                "host": "localhost",
+                "dialectOptions": {
+                    "instanceName": "SQLEXPRESS"
+                }
+            }
+        },
+        "models": "./database"
+    }
+}

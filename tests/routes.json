@@ -1,0 +1,6 @@
+{
+    "services": [
+        { "name": "$sequelize", "location": "../lib/sequelize"},
+        { "name": "$version", "location": "../services/version"}
+    ]
+}

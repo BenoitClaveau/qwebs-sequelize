@@ -1,0 +1,31 @@
+image: node:7.9.0
+
+before_script:
+  - npm install -loglevel silent
+  - chmod +x node_modules/.bin/*
+
+stages:
+  - test
+  - coverage
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm run cover
+  artifacts:
+    paths:
+      - coverage/
+
+pages:
+  stage: coverage
+  script:
+    - mv coverage/lcov-report/ public/
+  artifacts:
+    paths:
+      - public
+
+deploy:
+  stage: deploy
+  script:
+    - npm run deploy
